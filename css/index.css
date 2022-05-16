@@ -1,0 +1,57 @@
+.character {
+  text-align: center;
+  width: 15rem;
+  display: inline-block;
+  margin: .5rem; }
+  .character p {
+    font-size: 1.5rem;
+    padding-bottom: .5rem; }
+  .character img {
+    margin-top: 1rem;
+    border-radius: 25%; }
+
+.batman {
+  background-color: linear-gradient(rgba(248, 181, 151, 0.733333), #e7530fbb, rgba(15, 6, 1, 0.733333)); }
+  .batman:hover {
+    background-image: linear-gradient(rgba(151, 218, 248, 0.733333), rgba(15, 163, 231, 0.733333), rgba(1, 11, 15, 0.733333)); }
+  .batman:hover .batman-text {
+    color: rgba(251, 174, 173, 0.733333); }
+  .batman-text {
+    color: rgba(240, 123, 84, 0.8); }
+  .batman img {
+    transition: margin 1s, border-radius 1s, border 1s, transform 1s; }
+    .batman img:hover {
+      margin-top: 5rem;
+      border-radius: 50%;
+      border: 10px solid green;
+      transform: rotate3d(10, 0, 0, 360deg); }
+
+.wolverine {
+  background-color: linear-gradient(rgba(248, 181, 151, 0.733333), #e7530fbb, rgba(15, 6, 1, 0.733333)); }
+  .wolverine:hover {
+    background-image: linear-gradient(rgba(151, 218, 248, 0.733333), rgba(15, 163, 231, 0.733333), rgba(1, 11, 15, 0.733333)); }
+  .wolverine:hover .wolverine-text {
+    color: rgba(251, 217, 57, 0.733333); }
+  .wolverine-text {
+    color: rgba(240, 141, 33, 0.8); }
+
+.rogue {
+  background-color: linear-gradient(rgba(185, 250, 142, 0.733333), #62e40bbb, rgba(4, 9, 0, 0.733333)); }
+  .rogue:hover {
+    background-image: linear-gradient(rgba(207, 142, 250, 0.733333), rgba(141, 11, 228, 0.733333), rgba(6, 0, 9, 0.733333)); }
+  .rogue:hover .rogue-text {
+    color: rgba(230, 241, 56, 0.733333); }
+  .rogue-text {
+    color: rgba(155, 233, 31, 0.8); }
+
+.nightcrawler {
+  background-color: linear-gradient(rgba(164, 162, 239, 0.733333), #2825d3bb, rgba(3, 3, 16, 0.733333)); }
+  .nightcrawler:hover {
+    background-image: linear-gradient(rgba(237, 239, 162, 0.733333), rgba(208, 211, 37, 0.733333), rgba(16, 16, 3, 0.733333)); }
+  .nightcrawler:hover .nightcrawler-text {
+    color: rgba(220, 210, 89, 0.733333); }
+  .nightcrawler-text {
+    color: rgba(119, 112, 158, 0.8); }
+  @media screen and (mni-width: 800px) {
+    .nightcrawler img {
+      content: url("/mixins/spiderman-logo-vector-format-cdr-ai-eps-svg-pdf-spiderman-11562934532jgpn773qup.png"); } }

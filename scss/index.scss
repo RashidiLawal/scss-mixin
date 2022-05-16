@@ -1,0 +1,97 @@
+.character {
+    text-align: center;
+    width: 15rem;
+    display: inline-block;
+    margin: .5rem;
+
+
+    p {
+        font-size: 1.5rem;
+        padding-bottom: .5rem;
+    }
+
+
+    img {
+        margin-top: 1rem;
+        border-radius: 25%;
+    }
+}
+
+
+
+// One character
+// .batman {
+//     text-align: center;
+//     background-color: linear-gradient($light-color, $base-color, $dark-color);
+
+
+//     &:hover {background-image: linear-gradient($clc, $cbc, $cdc);}
+//     &:hover &-text {color: transparentize(mix($base-color, #fff341, 25%), .2);}
+
+//     &-text {
+//         font-size: 1.5rem;
+//         padding-bottom: 0.5rem;
+//         color: mix($base-color, #fff341, 75%);
+//     }
+
+//     img {
+//         margin-top: 1rem;
+//         border-radius: 25%;
+//     }
+// }
+
+
+
+// To reuse character
+@mixin make-transitions ($transitions...) {transition: $transitions;}
+
+@mixin make-character ($base-color: #e7530fbb, $mix-color: #fff321, $border: null) {
+    $light-color: lighten($base-color, 30%);
+    $dark-color: darken($base-color, 45%);
+    $cbc: complement($base-color);
+    $clc: complement($light-color);
+    $cdc: complement($dark-color);
+
+    background-color: linear-gradient($light-color, $base-color, $dark-color);
+
+
+    &:hover {background-image: linear-gradient($clc, $cbc, $cdc);}
+    &:hover &-text {color: transparentize(mix($base-color, $mix-color, 25%), .2);}
+
+    &-text {
+        color: mix($base-color, $mix-color, 75%);
+    }
+
+    img { @content;}
+}
+
+
+@mixin media($min-width) {
+    @media screen and (mni-width: $min-width) { @content;}
+}
+
+
+.batman { 
+    @include make-character($border: 5px solid brown, $mix-color: pink){
+       
+    
+        @include make-transitions(margin 1s, border-radius 1s, border 1s, transform 1s);
+
+        &:hover {
+            margin-top: 5rem;
+            border-radius: 50%;
+            border: 10px solid green;
+            transform: rotate3d(10, 0, 0, 360deg);
+        
+    }
+}
+}
+.wolverine { @include make-character(#e7530fbb, #fff341, 5px solid green)}
+.rogue { @include make-character(#62e40bbb, #fff341)}
+
+.nightcrawler { 
+    @include make-character(#2825d3bb, #fff341){
+        @include media(800px){content: url("/mixins/spiderman-logo-vector-format-cdr-ai-eps-svg-pdf-spiderman-11562934532jgpn773qup.png");};
+    }
+    // @include media(800px){display: none;};
+}

@@ -1,0 +1,15 @@
+{
+  "name": "mixins",
+  "version": "1.0.0",
+  "description": "SASS PRACTICES WITH MIXINS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-sass -o css scss"
+  },
+  "author": "Lawal Rashidi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
